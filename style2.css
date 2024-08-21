@@ -1,0 +1,124 @@
+/* 讓橘色背景填滿 */
+body,
+html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* 1399.98px */
+/* 導覽列 */
+.navbar {
+  /* width: 100%; */
+  background-color: #ff5722;
+  padding: 10px 20px;
+  /* 調整靠右的程度 */
+}
+
+/* 導覽列中的文字樣式 */
+.navbar-menu {
+  list-style-type: none; /* 移除列表的預設項目符號 */
+  margin: 0;
+  padding: 0;
+  display: flex; /* 使列表項目水平排列 */
+  align-items: center; /* 垂直對齊到中央 */
+}
+
+/* 設置導覽列中的每個連結的樣式 */
+.navbar-menu li a {
+  color: white; /* 文字顏色設為白色 */
+  text-decoration: none; /* 移除連結的下劃線 */
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+/* 設置連結的懸停效果 */
+.navbar-menu li a:hover {
+  background-color: #c3e615; /* 橘色的深色陰影 */
+  font-style: italic; /*斜體字*/
+  /* border-radius: 4px; 圓角效果 */
+}
+
+/* 設置社交Icon的樣式 */
+.social-icons img {
+  width: 24px; /* 設置Icon的寬度 */
+  height: 24px; /* 設置Icon的高度 */
+  margin-left: 5px; /* 每個Icon之間增加間距 */
+}
+
+/* 調整社交Icon的父元素樣式 */
+.social-icons {
+  display: flex; /* 使Icon水平排列 */
+  align-items: center; /* 垂直居中 */
+  margin-left: auto;
+  /* 將Icon推到導覽列的最右邊 */
+}
+/* 設置LOGO的樣式 */
+.navbar-logo img {
+  width: 100%;  /* 讓圖片寬度自適應父容器 */
+  max-width: 150px;  /* 設置LOGO的最大寬度 */
+  min-width: 100px;  /* 設置LOGO的最小寬度，防止它變得過小 */
+  height: auto;  /* 確保圖片保持其原始比例 */
+  }
+/* 搜尋欄的樣式 */
+.navbar-second {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-search {
+  width: 100%;
+  max-width: 100%; /* 防止搜尋欄超出容器 */
+  text-align: center;
+  margin: 10px auto;
+  /* overflow: hidden; */
+  /* 確保超出部分被隱藏 */
+}
+/* 搜尋按鈕會超出橘色區塊是因為沒有定義上面這行程式 */
+
+/* 魚皮購物的LOGO及按鈕 */
+.navbar-search input {
+  flex-grow: 1;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 35vw; /* 使用百分比寬度來讓欄位隨父容器自適應 */
+  margin-left: 20px; /* 讓logo與搜尋欄產生間距 */
+  box-sizing: border-box;
+}
+
+/* 魚皮購物的LOGO及按鈕 */
+.navbar-search button {
+  margin-right:auto;
+  white-space: nowrap; 
+  /* 防止文字換行 */
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+  .carousel-inner img {
+    width: 100% !important;
+    height: auto;
+    /* margin: 10px !important; */
+    padding: 0px 50px !important;
+    /* box-sizing:border-box !important; */
+    /* 圖片置中 */
+  }
+
+.navbar-bottom-menu {
+    list-style-type: none; /* 移除列表的預設項目符號 */
+    margin: 0;
+    padding: 20px 20px;
+    display: flex; /* 使列表項目水平排列 */
+    align-items: center; /* 垂直對齊到中央 */
+  }
+  
+  .navbar-bottom-menu a {
+    color: black; /* 文字顏色設為白色 */
+    text-decoration: none; /* 移除連結的下劃線 */
+    padding: 0px 30px;
+    font-size: 16px;
+    font-weight: bolder;
+  }
+  

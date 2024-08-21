@@ -1,19 +1,20 @@
 /* 讓橘色背景填滿 */
 body,
 html {
+  width: 100%;
   margin: 0;
   padding: 0;
 }
 
 /* 導覽列 */
 .navbar {
-  /* width: 100%; */
   background-color: #ff5722;
-  padding: 10px 20px;
+  padding: 10px 20px; /* 調整導覽列的內邊距，讓內容不貼橘色區塊 */
 }
 
 /* 導覽列中的文字樣式 */
 .navbar-menu {
+  width: 100%; /* 加上這行FB、IG、TWITTER的Icon就會往右移 */
   list-style-type: none; /* 移除列表的預設項目符號 */
   margin: 0;
   padding: 0;
@@ -32,7 +33,7 @@ html {
 /* 設置連結的懸停效果 */
 .navbar-menu li a:hover {
   background-color: #c3e615; /* 橘色的深色陰影 */
-  font-style: italic; /*斜體字*/
+  font-style: italic; /* 斜體字 */
   /* border-radius: 4px; 圓角效果 */
 }
 
@@ -47,57 +48,147 @@ html {
 .social-icons {
   display: flex; /* 使Icon水平排列 */
   align-items: center; /* 垂直居中 */
-  margin-left: auto;
-  /* 將Icon推到導覽列的最右邊 */
+  margin-left: auto; /* 將Icon推到導覽列的最右邊 */
 }
+
 /* 設置LOGO的樣式 */
 .navbar-logo img {
-    height: 65px; /* 設置LOGO的高度 */
-    margin-right: 0; /* 使LOGO與右側的導航項目保持距離 */
-    /* vertical-align: bottom; 垂直居中對齊 */
-    /* background-color:#FF5722;  */
-  }
-/* 搜尋欄的樣式 */
+  width: 100%; /* 讓圖片寬度自適應父容器 */
+  max-width: 150px; /* 設置LOGO的最大寬度 */
+  min-width: 100px; /* 設置LOGO的最小寬度，防止它變得過小 */
+  height: auto; /* 確保圖片保持其原始比例 */
+}
+
+/* 搜尋欄的樣式，搜尋欄的長度在這邊改 */
 .navbar-second {
   display: flex;
   align-items: center;
+  justify-content: center; /* 搜尋欄和LOGO保持在同一行並居中 */
+  margin-top: 10px; /* 與上方導覽列間距 */
+  width: 100%;
 }
 
+.navbar-search {
+  width: 100%;
+  max-width: 100%; /* 防止搜尋欄超出容器 */
+  text-align: center;
+  margin: 10px auto;
+}
+/* 先定義.navbar-second的width之後，在從.navbar-search這邊改長度 */
+/* 搜尋按鈕會超出橘色區塊是因為沒有定義上面這行程式 */
+
 .navbar-search input {
+  flex-grow: 1;
   padding: 5px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  width: 50em; /* 改變搜尋欄位的寬度 */
-  margin-left: 50px; /* 使logo與搜尋欄為產生間距 */
+  width: 100%; /* 使用百分比寬度來讓欄位隨父容器自適應 */
+  margin-left: 20px; /* 讓LOGO與搜尋欄產生間距 */
+  box-sizing: border-box;
 }
 
 .navbar-search button {
+  margin-right: auto;
+  white-space: nowrap;
+  /* 防止文字換行 */
   border-radius: 5px;
+  box-sizing: border-box;
 }
 
 .carousel-inner img {
-  width: 100% !important;
+  width: 100%;
   height: auto;
-  /* margin: 10px !important; */
-  padding: 0px 50px !important;
-  /* box-sizing:border-box !important; */
-  /* 圖片置中 */
+  padding: 0px 50px; /* 圖片內邊距，確保不會貼邊 */
+  margin-bottom: 100px;
+  /* 讓輪播圖片與下方carouselExample產生間距 */
 }
 
 .navbar-bottom-menu {
-    list-style-type: none; /* 移除列表的預設項目符號 */
-    margin: 0;
-    padding: 20px 20px;
-    display: flex; /* 使列表項目水平排列 */
-    align-items: center; /* 垂直對齊到中央 */
-  }
-  
-  .navbar-bottom-menu a {
-    color: black; /* 文字顏色設為白色 */
-    text-decoration: none; /* 移除連結的下劃線 */
-    padding: 0px 30px;
-    font-size: 16px;
-    font-weight: bolder;
-  }
-  
+  list-style-type: none; /* 移除列表的預設項目符號 */
+  margin: 0;
+  padding: 20px 20px;
+  display: flex; /* 使列表項目水平排列 */
+  align-items: center; /* 垂直對齊到中央 */
+}
+
+.navbar-bottom-menu a {
+  color: black; /* 文字顏色設為黑色 */
+  text-decoration: none; /* 移除連結的下劃線 */
+  padding: 0px 30px;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.col-md-4 img {
+  width: 100%; /* 保持圖片寬度100% */
+  height: 200px; /* 設定固定高度 */
+  object-fit: cover; /* 讓圖片覆蓋容器並保持比例 */
+  object-position: center; /* 圖片居中顯示 */
+}
+
+/* 此段程式碼為控制IKEA的商品圖片 */
+.carousel-inner2 img {
+  padding-bottom: 10px;
+}
+
+/* 使登入區塊居中 */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 覆蓋整個視窗高度 */
+  background-color: #f8f9fa; /* 淺色背景 */
+}
+
+/* ----------------------------以下為Login系統---------------------------- */
+/* 登入表單樣式 */
+.login-box {
+  width: 100%;
+  max-width: 400px; /* 限制表單寬度 */
+  padding: 20px;
+  background-color: #fff; /* 表單背景色 */
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  /* 輕微陰影 */
+}
+
+/* "登入"文字字樣控制 */
+.login-box h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* 登入按鈕控制 */
+.btn-login {
+  background-color: #ff6f61; /* 登入按鈕背景色 */
+  border: none;
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.btn-login:hover {
+  background-color: pink; /* 登入按鈕 hover 狀態背景色 */
+}
+
+/* 控制帳號與密碼區塊的間距 */
+.account_block,
+.password_block {
+  margin-bottom: 20px;
+}
+
+.shopping{
+  width: 100%;
+}
+
+.shopping img{
+  width: 70%;
+  margin-bottom: 50px;
+}
+
+.shopping h1,.shopping h2{
+  font-weight: bolder;
+}
