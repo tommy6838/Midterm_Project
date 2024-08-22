@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>魚皮購物</title>
+    <link rel="stylesheet" href="../Midterm_Project/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./icon/Favorite_Iocn.png"
+      type="image/x-icon"
+    />
+    <!-- Bootstrap CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- 導覽列開始 -->
+      <nav class="navbar">
+        <ul class="navbar-menu">
+          <li><a href="./index.html">首頁</a></li>
+          <li><a href="#">下載</a></li>
+          <li><a href="#">追蹤我們</a></li>
+          <li id="login_text"><a href="./Login.html">登入</a></li>
+          <li class="social-icons">
+            <a href="http://facebook.com/" target="_blank">
+              <img src="./icon/facebook.png" />
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+              <img src="./icon/instagram.png" target="_blank" alt="" />
+            </a>
+            <a href="https://www.twitter.com/" target="_blank">
+              <img src="./icon/twitter.png" target="_blank" alt="" />
+            </a>
+            <!-- 在社交媒體圖標旁邊添加購物車圖標 -->
+            <!-- <a href="cart.html">
+              <img src="./icon/cart.png" alt="購物車" />
+            </a> -->
+          </li>
+        </ul>
+      </nav>
+      <div class="navbar-bottom-menu">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">產品</a></li>
+          <li class="list-inline-item"><a href="#">空間</a></li>
+          <li class="list-inline-item"><a href="#">佈置靈感</a></li>
+          <li class="list-inline-item"><a href="#">新品專區</a></li>
+        </ul>
+      </div>
+      <div class="shopping">
+        <h1>睡好覺 做好夢</h1>
+        <br />
+        <h4>你知道如何睡好覺嗎? 六大好睡元素助你睡好覺，做好夢！</h4>
+        <p>
+            我們提供一系列的臥室家具、寢具，從舒適柔軟的床墊、枕頭、床包到可以調節溫度的涼被、涼感寢具，也有可以隔絕光線的窗簾/捲簾，還有吸音效果絕佳的地毯讓你阻隔吵雜的聲音；我們也有提供可以營造氣氛的夜燈、智慧燈具、淨化室內空氣的空氣清淨機，讓你的睡眠品質更好！另外也提供衣櫃、抽屜櫃、床下收納盒等收納解決方案，讓你輕鬆收納房間雜物，為你打造更舒服的睡覺環境跟空間，好好放鬆休息，享受真正的一夜好眠。
+        </p>
+        <img src="./shop_photo/5_bigSize.jpeg"/>
+        <img src="./shop_photo/6_bigSize.jpeg"/>
+        <img src="./shop_photo/7_bigSize.jpeg"/>
+        <div class="cart-section">
+          <!-- 使用d-flex類，使數量選擇器和加入購物車按鈕在同一行 -->
+          <div class="d-flex align-items-center">
+            <!-- 數量選擇器 -->
+            <div class="me-4">
+              <label for="quantity">數量：</label>
+              <input
+                type="number"
+                id="quantity"
+                name="quantity"
+                value="1"
+                min="1"
+                class="form-control"
+              />
+            </div>
+            <!-- 加入購物車按鈕 -->
+            <a href="./success.html">
+              <button id="add-to-cart" class="btn btn-primary">
+                加入購物車
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 引入JavaScript -->
+    <script>
+      const isLoggedIn = localStorage.getItem("isLoggedIn");
+      const loginTextElement = document.getElementById("login_text");
+      if (isLoggedIn === "true") {
+        login_text.innerHTML = '<a href="./login.html">登出</a>';
+      }
+    </script>
+    <script src="cart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

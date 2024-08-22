@@ -24,6 +24,8 @@ html {
 
 /* 設置導覽列中的每個連結的樣式 */
 .navbar-menu li a {
+  display: inline-block;
+  /* 手機顯示時，文字會換行置中 */
   color: white; /* 文字顏色設為白色 */
   text-decoration: none; /* 移除連結的下劃線 */
   padding: 5px 10px;
@@ -109,13 +111,16 @@ html {
   margin: 0;
   padding: 20px 20px;
   display: flex; /* 使列表項目水平排列 */
-  align-items: center; /* 垂直對齊到中央 */
+  align-items: center; 
+  /* 垂直對齊到中央 */
 }
 
 .navbar-bottom-menu a {
+  text-align:right;
   color: black; /* 文字顏色設為黑色 */
   text-decoration: none; /* 移除連結的下劃線 */
-  padding: 0px 30px;
+  /* padding: 0px 2vh; */
+  margin-bottom: calc(2em + 1vw);
   font-size: 16px;
   font-weight: bolder;
 }
@@ -184,11 +189,23 @@ html {
   width: 100%;
 }
 
+/* 購物頁面的圖片 */
 .shopping img{
   width: 70%;
-  margin-bottom: 50px;
+  margin-bottom: calc(0.5em + 1vw);
 }
 
-.shopping h1,.shopping h2{
+/* 購物頁面的文字格式 */
+.shopping h1,.shopping h2,.shopping h3,.shopping h4{
   font-weight: bolder;
+}
+
+/* 控制加入購物車的按鈕 */
+.btn-primary {
+  /* margin: 5px; */
+  height: 60px; /* 確保按鈕的高度與數量選擇器一致 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: static;
 }

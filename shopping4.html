@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>魚皮購物</title>
+    <link rel="stylesheet" href="../Midterm_Project/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./icon/Favorite_Iocn.png"
+      type="image/x-icon"
+    />
+    <!-- Bootstrap CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- 導覽列開始 -->
+      <nav class="navbar">
+        <ul class="navbar-menu">
+          <li><a href="./index.html">首頁</a></li>
+          <li><a href="#">下載</a></li>
+          <li><a href="#">追蹤我們</a></li>
+          <li id="login_text"><a href="./Login.html">登入</a></li>
+          <li class="social-icons">
+            <a href="http://facebook.com/" target="_blank">
+              <img src="./icon/facebook.png" />
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+              <img src="./icon/instagram.png" target="_blank" alt="" />
+            </a>
+            <a href="https://www.twitter.com/" target="_blank">
+              <img src="./icon/twitter.png" target="_blank" alt="" />
+            </a>
+            <!-- 在社交媒體圖標旁邊添加購物車圖標 -->
+            <!-- <a href="cart.html">
+              <img src="./icon/cart.png" alt="購物車" />
+            </a> -->
+          </li>
+        </ul>
+      </nav>
+      <div class="navbar-bottom-menu">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">產品</a></li>
+          <li class="list-inline-item"><a href="#">空間</a></li>
+          <li class="list-inline-item"><a href="#">佈置靈感</a></li>
+          <li class="list-inline-item"><a href="#">新品專區</a></li>
+        </ul>
+      </div>
+      <div class="shopping">
+        <h1>2024開學季</h1>
+        <br />
+        <p>
+          不論你是大一新鮮人還是迎接小孩開學返校的爸媽，IKEA都幫你想好了！你可以和孩子一起準備想要的開學必需品，用小預算就能搞定的電腦桌、電腦椅、還有實用的文具收納盒、抽屜櫃等，讓你能輕鬆收納學習用品，讓書桌整齊有序。我們深知孩子的想法和需求，提供打造新學期新書房、新宿舍的所有必備人氣單品，迎接讓人興奮的開學新生活，展開新的學習篇章。
+        </p>
+        <br />
+        <br />
+        <h4>為新學期、學校新生活做好準備！</h4>
+        <p>
+          好的開始是成功的一半，打造完美學習區為學校生活做好準備。讓孩子一起參加採購過程，選擇價格實惠的聰明收納家具和活潑有趣的配件，讓學習空間更能呈現孩子的個性，也將他們的獨特天賦帶入學校生活。/捲簾，還有吸音效果絕佳的地毯讓你阻隔吵雜的聲音；我們也有提供可以營造氣氛的夜燈、智慧燈具、淨化室內空氣的空氣清淨機，讓你的睡眠品質更好！另外也提供衣櫃、抽屜櫃、床下收納盒等收納解決方案，讓你輕鬆收納房間雜物，為你打造更舒服的睡覺環境跟空間，好好放鬆休息，享受真正的一夜好眠。
+        </p>
+        <img src="./shop_photo/8_bigSize.jpeg" />
+        <div class="cart-section">
+          <!-- 使用d-flex類，使數量選擇器和加入購物車按鈕在同一行 -->
+          <div class="d-flex align-items-center">
+            <!-- 數量選擇器 -->
+            <div class="me-4">
+              <label for="quantity">數量：</label>
+              <input
+                type="number"
+                id="quantity"
+                name="quantity"
+                value="1"
+                min="1"
+                class="form-control"
+              />
+            </div>
+            <!-- 加入購物車按鈕 -->
+            <a href="./success.html">
+              <button id="add-to-cart" class="btn btn-primary">
+                加入購物車
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 引入JavaScript -->
+    <script>
+      const isLoggedIn = localStorage.getItem("isLoggedIn");
+      const loginTextElement = document.getElementById("login_text");
+      if (isLoggedIn === "true") {
+        login_text.innerHTML = '<a href="./login.html">登出</a>';
+      }
+    </script>
+    <script src="cart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
