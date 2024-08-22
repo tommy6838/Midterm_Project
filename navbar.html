@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./Search.js"></script>
+  </head>
+  <body>
+    <!-- <div class="container"> 使用-fluid之後，會讓橘色區塊接近滿版 -->
+    <div class="container-fluid">
+      <!-- 用容器包裹整個內容，保持頁面布局 -->
+      <nav class="navbar">
+        <!-- 導覽列開始 -->
+        <ul class="navbar-menu">
+          <!-- 導覽列選項 -->
+          <li><a href="./index.html">首頁</a></li>
+          <li><a href="#">下載</a></li>
+          <li><a href="#">追蹤我們</a></li>
+          <li id="login_text"><a href="./Login.html">登入</a></li>
+          <li id="user_name_display" style="margin-right: 50px; display: none">
+            歡迎, tommy6838
+          </li>
+          <li class="social-icons">
+            <!-- <a href="">
+                  <script>
+                    if (isLoggedIn === "true") {
+                      const username = sessionStorage.getItem("username");
+                      loginTextElement.innerHTML = `<a href="./index.html">登出 (${username})</a>`;
+                    }
+                  </script>
+                </a> -->
+            <!-- 社交媒體圖標 -->
+            <a href="http://facebook.com/" target="_blank">
+              <img src="./icon/facebook.png" />
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+              <img src="./icon/instagram.png" target="_blank" alt="" />
+            </a>
+            <a href="https://www.twitter.com/" target="_blank">
+              <img src="./icon/twitter.png" target="_blank" alt="" />
+            </a>
+          </li>
+        </ul>
+
+        <!-- 第二行，包含LOGO和搜尋欄 -->
+        <div class="navbar-second text-center">
+          <!-- 新增的容器，用來確保LOGO和搜尋欄在第二行 -->
+
+          <a href="./index.html" class="navbar-logo">
+            <!-- LOGO區域 -->
+            <img src="./icon/fishope2.png" alt="魚皮購物 LOGO" />
+          </a>
+          <form
+            id="search-form"
+            class="navbar-search d-flex justify-content-center mt-1"
+          >
+            <!-- 搜尋欄 -->
+            <input
+              type="search"
+              id="search-input"
+              class="form-control custom-search-input me-2"
+              placeholder="搜尋商品或品牌..."
+            />
+            <button type="submit" class="btn btn-light">搜尋</button>
+          </form>
+        </div>
+      </nav>
+
+      <!-- 其他內容部分 -->
+      <div class="navbar-bottom-menu">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">產品</a></li>
+          <li class="list-inline-item"><a href="#">空間</a></li>
+          <li class="list-inline-item"><a href="#">佈置靈感</a></li>
+          <li class="list-inline-item"><a href="#">新品專區</a></li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      // 在導航列中執行登錄檢查和顯示邏輯
+      const isLoggedIn = sessionStorage.getItem("isLoggedIn");
+      const loginTextElement = document.getElementById("login_text");
+      const userNameDisplay = document.getElementById("user_name_display");
+
+      if (isLoggedIn === "true") {
+        // 修改登錄狀態文字
+        loginTextElement.innerHTML = '<a href="./index.html">登出</a>';
+
+        // 顯示用戶名
+        userNameDisplay.style.display = "inline";
+      } else {
+        // 確保未登錄時不顯示用戶名
+        loginTextElement.innerHTML = '<a href="./login.html">登入</a>';
+        userNameDisplay.style.display = "none";
+      }
+
+      // 設置登出按鈕點擊事件
+      loginTextElement.addEventListener("click", function () {
+        if (isLoggedIn === "true") {
+          sessionStorage.setItem("isLoggedIn", "false");
+          sessionStorage.removeItem("username");
+          window.location.reload(); // 刷新頁面以更新導航列狀態
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -135,17 +135,18 @@ html {
 .carousel-inner2 img {
   padding-bottom: 10px;
 }
+/* ------------------------以下為Login系統------------------------ */
 
 /* 使登入區塊居中 */
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* 覆蓋整個視窗高度 */
+  height: 60vh; 
+  /* 覆蓋整個視窗高度，以及登入區塊的位置 */
   background-color: #f8f9fa; /* 淺色背景 */
 }
 
-/* ----------------------------以下為Login系統---------------------------- */
 /* 登入表單樣式 */
 .login-box {
   width: 100%;
@@ -153,8 +154,7 @@ html {
   padding: 20px;
   background-color: #fff; /* 表單背景色 */
   border-radius: 8px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-  /* 輕微陰影 */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* 輕微陰影 */
 }
 
 /* "登入"文字字樣控制 */
@@ -184,7 +184,7 @@ html {
 .password_block {
   margin-bottom: 20px;
 }
-
+/* ------------------------以上為Login系統------------------------ */
 .shopping{
   width: 100%;
 }

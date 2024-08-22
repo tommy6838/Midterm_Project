@@ -16,7 +16,8 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     // 簡單的檢查邏輯
     if (enteredUsername == userDatabase.username && enteredPassword == userDatabase.password) {
         alert('登入成功！');
-        localStorage.setItem('isLoggedIn', 'true');
+        sessionStorage.setItem('isLoggedIn', 'true');
+        sessionStorage.setItem('username', userDatabase.username); // 保存用戶名到 sessionStorage
         // 在 localStorage 中存儲登入狀態
         // 這裡可以跳轉到其他頁面或執行其他操作
         window.location.href = 'index.html';

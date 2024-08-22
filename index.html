@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>魚皮購物</title>
-    <link rel="stylesheet" href="../Midterm_Project/style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link
       rel="shortcut icon"
       href="./icon/Favorite_Iocn.png"
@@ -20,61 +20,6 @@
     />
   </head>
   <body>
-    <!-- <div class="container"> 使用-fluid之後，會讓橘色區塊接近滿版 -->
-    <div class="container-fluid">
-      <!-- 用容器包裹整個內容，保持頁面布局 -->
-      <nav class="navbar">
-        <!-- 導覽列開始 -->
-        <ul class="navbar-menu">
-          <!-- 導覽列選項 -->
-          <li><a href="./index.html">首頁</a></li>
-          <li><a href="#">下載</a></li>
-          <li><a href="#">追蹤我們</a></li>
-          <li id="login_text"><a href="./Login.html">登入</a></li>
-          <li class="social-icons">
-            <!-- 社交媒體圖標 -->
-            <a href="http://facebook.com/" target="_blank">
-              <img src="./icon/facebook.png" />
-            </a>
-            <a href="https://www.instagram.com/" target="_blank">
-              <img src="./icon/instagram.png" target="_blank" alt="" />
-            </a>
-            <a href="https://www.twitter.com/" target="_blank">
-              <img src="./icon/twitter.png" target="_blank" alt="" />
-            </a>
-          </li>
-        </ul>
-
-        <!-- 第二行，包含LOGO和搜尋欄 -->
-        <div class="navbar-second text-center">
-          <!-- 新增的容器，用來確保LOGO和搜尋欄在第二行 -->
-
-          <a href="#" class="navbar-logo">
-            <!-- LOGO區域 -->
-            <img src="./icon/fishope2.png" alt="魚皮購物 LOGO" />
-          </a>
-          <form id="search-form" class="navbar-search d-flex justify-content-center mt-1">
-            <!-- 搜尋欄 -->
-            <input
-            type="search"
-            id="search-input"
-            class="form-control custom-search-input me-2"
-            placeholder="搜尋商品或品牌..."
-            />
-            <button type="submit" class="btn btn-light">搜尋</button>
-          </form>
-        </div>
-      </nav>
-
-      <!-- 其他內容部分 -->
-      <div class="navbar-bottom-menu">
-        <ul class="list-inline">
-          <li class="list-inline-item"><a href="#">產品</a></li>
-          <li class="list-inline-item"><a href="#">空間</a></li>
-          <li class="list-inline-item"><a href="#">佈置靈感</a></li>
-          <li class="list-inline-item"><a href="#">新品專區</a></li>
-        </ul>
-      </div>
 
       <!-- 圖片輪播開始 -->
       <div
@@ -99,7 +44,6 @@
             </a>
           </div>
         </div>
-      </div>
       <!-- 圖片輪播結束 -->
 
       <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
@@ -167,17 +111,56 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-    </div>
     <!-- 容器結束 -->
-    <script>
-      const isLoggedIn = localStorage.getItem("isLoggedIn");
-      const loginTextElement = document.getElementById("login_text");
-      if (isLoggedIn === "true") {
-        login_text.innerHTML = '<a href="./login.html">登出</a>';
-      }
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
-    <script src="./Search.js"></script>
   </body>
+  <script>
+    // 動態加載導航列的內容
+    // 這段代碼的目的是使用 fetch API 動態地從 'navbar.html' 文件中加載導航列內容，
+    // 並將其插入到當前頁面的最上方。
+  
+    // 使用 fetch 函數發送一個請求來獲取 'navbar.html' 文件的內容
+    fetch('./navbar.html')
+      // 當請求完成並得到響應時，fetch 會返回一個 Promise 對象。
+      // 這裡的 then 方法用來處理成功獲取到的響應數據。
+      .then(response => response.text())
+      // response.text() 會將響應的內容轉換為文本（通常是 HTML 結構），
+      // 並返回一個 Promise，該 Promise 解析後會提供文本數據。
+      .then(data => {
+        // 在這個 then 回調函數中，我們拿到了 'navbar.html' 的內容，現在要將它插入到頁面中。
+  
+        // 使用 document.body.insertAdjacentHTML() 方法將獲取的 HTML 代碼插入到當前頁面中
+        // 'afterbegin' 表示插入到 body 標籤內的最開始位置，即其他內容之前。
+        document.body.insertAdjacentHTML('afterbegin', data);
+  
+        // 確保導航列加載完成後再執行 Search.js 的代碼
+        // 這裡我們創建了一個新的 <script> 元素來動態地加載 Search.js。
+        // 原因是如果 Search.js 在導航列（navbar.html）尚未加載到 DOM 中就執行，
+        // 那麼 Search.js 會找不到需要綁定事件的元素（例如搜尋表單）。
+  
+        // 創建一個 <script> 標籤
+        const script = document.createElement('script');
+        
+        // 設置這個 script 元素的 src 屬性，讓它指向我們的 Search.js 文件
+        script.src = './Search.js';
+  
+        // 將這個 script 元素添加到 body 標籤的末尾
+        // 這樣 Search.js 會在導航列加載後執行，確保所有元素都已存在於 DOM 中。
+        document.body.appendChild(script);
+
+    const isLoggedIn = sessionStorage.getItem("isLoggedIn");
+    const loginTextElement = document.getElementById("login_text");
+    if (isLoggedIn === "true") {
+      login_text.innerHTML = '<a href="./index.html">登出</a>';
+
+      loginTextElement.onclick = function() {
+      sessionStorage.setItem('isLoggedIn', 'false');
+      // 建立一個function，點擊事件處理器，點擊「登出」時，將登入狀態設置為 false
+      }
+    }else{
+      login_text.innerHTML = '<a href="./login.html">登入</a>';
+    }
+      });
+  </script>
 </html>

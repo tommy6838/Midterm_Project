@@ -9,7 +9,7 @@ document.getElementById('search-form').addEventListener('submit', function(event
     let productPages = {
         '椅子': 'shopping1.html',
         '辦公': 'shopping2.html',
-        '床': 'shopping3.html',
+        '床墊': 'shopping3.html',
         '書桌': 'shopping4.html',
         // 'klippan': 'shopping5.html'
     };
