@@ -2,7 +2,7 @@
 body,
 html {
   width: 100%;
-  margin: 0;
+  margin: 0px;
   padding: 0;
 }
 
@@ -111,12 +111,12 @@ html {
   margin: 0;
   padding: 20px 20px;
   display: flex; /* 使列表項目水平排列 */
-  align-items: center; 
+  align-items: center;
   /* 垂直對齊到中央 */
 }
 
 .navbar-bottom-menu a {
-  text-align:right;
+  text-align: right;
   color: black; /* 文字顏色設為黑色 */
   text-decoration: none; /* 移除連結的下劃線 */
   /* padding: 0px 2vh; */
@@ -135,6 +135,7 @@ html {
 .carousel-inner2 img {
   padding-bottom: 10px;
 }
+
 /* ------------------------以下為Login系統------------------------ */
 
 /* 使登入區塊居中 */
@@ -142,7 +143,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh; 
+  height: 60vh;
   /* 覆蓋整個視窗高度，以及登入區塊的位置 */
   background-color: #f8f9fa; /* 淺色背景 */
 }
@@ -185,18 +186,21 @@ html {
   margin-bottom: 20px;
 }
 /* ------------------------以上為Login系統------------------------ */
-.shopping{
+.shopping {
   width: 100%;
 }
 
 /* 購物頁面的圖片 */
-.shopping img{
+.shopping img {
   width: 70%;
   margin-bottom: calc(0.5em + 1vw);
 }
 
 /* 購物頁面的文字格式 */
-.shopping h1,.shopping h2,.shopping h3,.shopping h4{
+.shopping h1,
+.shopping h2,
+.shopping h3,
+.shopping h4 {
   font-weight: bolder;
 }
 
@@ -208,4 +212,72 @@ html {
   align-items: center;
   justify-content: center;
   position: static;
+}
+
+/* ------------------------以下為九宮格------------------------ */
+.Jiugongge-URL{
+  color: black; /* 文字顏色設為黑色 */
+  text-decoration: none; /* 移除連結的底線 */
+  display: block;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 平滑的變換效果 */
+}
+
+.Jiugongge-URL:hover{
+  transform: scale(1.06); 
+  /* 使卡片放大 5% */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); 
+  /* 增加陰影 */
+}
+.Jiugongge {
+  width: 100%;
+  height: 1100px;
+  line-height: 0;
+  overflow: hidden;
+}
+
+/* 將iframe的滾動條轉換成區塊元素 */
+.Jiugongge iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* .Jiugongge img{
+  width: 1%;
+} */
+
+/* .Jiugongge-container {
+  width: 500px;
+} */
+
+/* 將標題的名稱用...省略 */
+.card-img {
+object-fit: cover;
+width: auto;
+}
+.card-body h5{
+  /* font-family:cursive; */
+  width: 100%; /* 確保文本在父容器內 */
+  white-space: nowrap; /* 強制文本在一行內顯示 */
+  overflow: hidden; /* 隱藏超出容器的文本 */
+  text-overflow: ellipsis; /* 顯示省略號 */
+  font-size: 24px;
+  text-align: left;
+  font-weight: bold;
+}
+/* 將內文的文字用...省略 */
+.card-text{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* 顯示2行，超出部分會顯示省略號 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-price{
+  font-size: 16px;
+  margin-top: auto; /* 確保文本部分向下對齊 */
+  text-align: left;
+  color: #ff5722;
 }

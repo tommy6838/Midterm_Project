@@ -1,0 +1,191 @@
+<head>
+  <!-- 九宮格購物使用的BS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body style="width: 93%; margin: 0 auto; ">
+  <!-- ↑在body這邊控制width可以讓橫向的滾動軸不見，marin可以置中 -->
+
+  <!-- bootstarp的原生CSS模組是12格， col-sm-2 代表 這個div占用12格中的2格
+  但一個頁面的總共是24格，12格只有頁面的50%
+  而-fluid控制讓商品由原本商品由2/12格轉變成變成2/24格 -->
+  <div class="Jiugongge-container-fluid">
+    <div class="row">
+      <!-- 單個產品卡片 -->
+      <div class="col-sm-3 mb-2">
+        <a
+          href="https://shopee.tw/%EF%BC%88%E9%AB%98%E6%A8%99%E6%BA%96%E8%80%85%E8%AB%8B%E7%B9%9E%E9%81%93%E2%80%BC%EF%B8%8F%EF%BC%89%E3%80%90%E9%A0%90%E8%B3%BC-%E7%8F%BE%E8%B2%A8%E3%80%91%E5%BE%A9%E5%8F%A4%E5%86%B0%E7%AE%B1%E9%A6%96%E9%A3%BE%E6%94%B6%E7%B4%8D%E7%9B%92-%E9%98%B2%E5%A1%B5%E5%B8%B6%E8%93%8B%E7%8F%A0%E5%AF%B6%E7%AE%B1%E6%89%8B%E9%90%B2%E6%89%8B%E9%8F%88%E6%88%92%E6%8C%87%E8%80%B3%E9%87%98%E9%A0%85%E9%8F%88%E7%9B%92%E9%A6%96%E9%A3%BE%E6%94%B6%E7%B4%8D%E7%9B%92-%E5%AF%A6%E6%9C%A8%E8%A3%BD%E5%93%81%E5%A4%A7%E5%AE%B9%E9%87%8F-i.1725445.16498536283?sp_atk=70889a4f-74d8-4cc6-83f0-d946d602606f&xptdk=70889a4f-74d8-4cc6-83f0-d946d602606f"
+          target="_blank"
+          class="Jiugongge-URL"
+        >
+          <div class="card h-100">
+            <img src="./Jiugongge/1.jpg" class="card-img" alt="產品1" />
+            <div class="card-body">
+              <h5 class="card-title">復古冰箱首飾收納盒</h5>
+              <p class="card-text">
+                防塵帶蓋珠寶箱手鐲手鏈戒指耳釘項鏈盒首飾收納盒 實木製品大容量
+              </p>
+              <p class="card-price"><strong>$1,099</strong></p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <!-- 單個產品卡片 -->
+      <div class="col-sm-3 mb-2">
+        <a
+          href="https://shopee.tw/%E3%80%90%E5%85%8D%E9%81%8B%E8%B2%BB-%E5%BF%AB%E9%80%9F%E5%87%BA%E8%B2%A8-%E9%A0%98%E5%88%B89%E6%8A%98-10%E5%80%8D%E8%9D%A6%E5%B9%A3%E3%80%91%E5%87%BA%E5%9C%8B%E7%A5%9E%E5%99%A8-%E7%99%BB%E6%A9%9F%E7%AE%B1-%E5%85%92%E7%AB%A5%E8%A1%8C%E6%9D%8E%E7%AE%B1-20%E5%90%8B%E5%8F%AF%E7%99%BB%E6%A9%9F-%E5%8F%AF%E5%9D%90%E8%A1%8C%E6%9D%8E%E7%AE%B1-%E8%A1%8C%E6%9D%8E%E7%AE%B1%E6%8E%A8%E8%BB%8A-%E5%85%92%E7%AB%A5%E6%8E%A8%E8%BB%8A-i.2705480.24781936142?sp_atk=96b9ecff-65ee-4c73-bd86-1f7d05233652&xptdk=96b9ecff-65ee-4c73-bd86-1f7d05233652"
+          target="_blank"
+          class="Jiugongge-URL"
+        >
+          <div class="card h-100">
+            <img src="./Jiugongge/2.jpg" class="card-img" alt="產品2" />
+            <div class="card-body">
+              <h5 class="card-title">登機箱</h5>
+              <p class="card-text">
+                出國神器 登機箱　兒童行李箱 20吋可登機 可坐行李箱 行李箱推車
+                兒童推車
+              </p>
+              <p class="card-price"><strong>$4,280</strong></p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- 單個產品卡片 -->
+      <div class="col-sm-3 mb-2">
+        <a
+          href="https://shopee.tw/%E3%80%90%E5%8F%B0%E7%81%A3%E7%8F%BE%E8%B2%A8-%E5%A5%BD%E5%90%83%E5%A5%BD%E7%8E%A9%E3%80%91%E5%AE%98%E8%80%B3%E7%9B%B2%E7%9B%92%E6%89%AD%E8%9B%8B%E6%A9%9F-%E6%89%AD%E6%89%AD%E6%A9%9F-%E4%B8%83%E7%A8%AE%E5%8F%A3%E5%91%B3%E6%9C%89%E6%A9%9F%E9%8A%80%E8%80%B3-%E5%85%92%E7%AB%A5%E7%8E%A9%E5%85%B7-%E7%94%9F%E6%97%A5%E7%A6%AE%E7%89%A9-%E5%8A%A0%E5%8E%9A%E5%AF%A6%E7%94%A8%E6%9C%89%E8%B6%A3%E5%B9%BC%E7%A8%9A%E5%9C%92-%E4%BB%A3%E9%A4%90-%E6%89%AD%E8%9B%8B-%E6%93%BA%E4%BB%B6-i.27658827.29203245240?sp_atk=5a35a83a-70f1-46d1-a050-85d21009b9fc&xptdk=5a35a83a-70f1-46d1-a050-85d21009b9fc"
+          target="_blank"
+          class="Jiugongge-URL"
+        >
+          <div class="card h-100">
+            <img src="./Jiugongge/3.jpg" class="card-img" alt="產品2" />
+            <div class="card-body">
+              <h5 class="card-title">官耳盲盒扭蛋機</h5>
+              <p class="card-text">
+                扭扭機 七種口味有機銀耳 兒童玩具 生日禮物 加厚實用有趣幼稚園
+                代餐 扭蛋 擺件
+              </p>
+              <p class="card-price"><strong>$320</strong></p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- 單個產品卡片 -->
+      <div class="col-sm-3 mb-2">
+        <a
+          href="
+                https://shopee.tw/%E6%97%A5%E7%89%88-san-x-%E8%A7%92%E8%90%BD%E7%94%9F%E7%89%A9-%E5%AF%8C%E5%A3%AB%E5%B1%B1-%E9%A6%AC%E5%85%8B%E6%9D%AF-%E9%99%B6%E7%93%B7%E5%A3%BA-%E6%B0%B4%E6%9D%AF-%E5%A4%A7%E9%85%92%E5%BA%97-%E9%A3%AF%E5%BA%97%E9%99%90%E9%87%8F-%E8%A7%92%E8%90%BD%E5%B0%8F%E5%A4%A5%E4%BC%B4%E5%91%A8%E9%82%8A-%E7%94%9F%E6%97%A5%E7%A6%AE%E7%89%A9-%E5%89%B5%E6%84%8F%E7%A6%AE%E7%89%A9-%E4%BA%A4%E6%8F%9B%E7%A6%AE%E7%89%A9-i.86841869.17896678836?sp_atk=0216fd9d-0e8e-4ce7-86fe-c0230a5c605e&xptdk=0216fd9d-0e8e-4ce7-86fe-c0230a5c605e
+               "
+          target="_blank"
+          class="Jiugongge-URL"
+        >
+          <div class="card h-100">
+            <img src="./Jiugongge/4.jpg" class="card-img" alt="產品2" />
+            <div class="card-body">
+              <h5 class="card-title">日版 san-x 角落生物</h5>
+              <p class="card-text">
+                富士山 馬克杯 陶瓷壺 水杯 大酒店 飯店限量 角落小夥伴周邊
+                生日禮物 創意禮物 交換禮物
+              </p>
+              <p class="card-price"><strong>$690</strong></p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- 單個產品卡片 -->
+      <div class="col-sm-3 mb-2">
+        <a
+          href="
+               https://shopee.tw/%E6%97%A5%E7%89%88-san-x-%E8%A7%92%E8%90%BD%E7%94%9F%E7%89%A9-%E5%AF%8C%E5%A3%AB%E5%B1%B1-%E9%A6%AC%E5%85%8B%E6%9D%AF-%E9%99%B6%E7%93%B7%E5%A3%BA-%E6%B0%B4%E6%9D%AF-%E5%A4%A7%E9%85%92%E5%BA%97-%E9%A3%AF%E5%BA%97%E9%99%90%E9%87%8F-%E8%A7%92%E8%90%BD%E5%B0%8F%E5%A4%A5%E4%BC%B4%E5%91%A8%E9%82%8A-%E7%94%9F%E6%97%A5%E7%A6%AE%E7%89%A9-%E5%89%B5%E6%84%8F%E7%A6%AE%E7%89%A9-%E4%BA%A4%E6%8F%9B%E7%A6%AE%E7%89%A9-i.86841869.17896678836?sp_atk=0216fd9d-0e8e-4ce7-86fe-c0230a5c605e&xptdk=0216fd9d-0e8e-4ce7-86fe-c0230a5c605e
+               "
+          target="_blank"
+          class="Jiugongge-URL"
+        >
+          <div class="card h-100">
+            <img src="./Jiugongge/5.jpg" class="card-img" alt="產品2" />
+            <div class="card-body">
+              <h5 class="card-title">魚缸 水族箱</h5>
+              <p class="card-text">
+                小魚缸 塑料帶蓋生態缸 金魚缸 家用客廳透明小型茶桌桌面造景缸
+              </p>
+              <p class="card-price"><strong>$526</strong></p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- 單個產品卡片 -->
+      <div class="col-sm-3 mb-2">
+        <a
+          href="
+          https://shopee.tw/%E2%98%86%E9%B3%A5%E5%8F%A3%E8%B2%A9%E5%AD%90%E2%98%86NICI%E6%AD%A3%E5%93%812023%E8%81%96%E8%AA%95%E7%AF%80-%E6%B5%B7%E5%A4%96%E9%99%90%E5%AE%9A%E6%AC%BE-18cm%E6%8B%89%E6%8B%89%E9%B3%A5Funny-Bird-i.21945934.22462296206?sp_atk=0a90351a-91e8-4a80-be12-4c5aac64d117&xptdk=0a90351a-91e8-4a80-be12-4c5aac64d117
+          "
+          target="_blank"
+          class="Jiugongge-URL"
+        >
+          <div class="card h-100">
+            <img src="./Jiugongge/6.jpg" class="card-img" alt="產品2" />
+            <div class="card-body">
+              <h5 class="card-title">拉拉鳥Funny Bird</h5>
+              <p class="card-text">
+                ☆鳥口販子☆NICI正品2023聖誕節/海外限定款/18cm拉拉鳥Funny Bird
+              </p>
+              <p class="card-price"><strong>$800</strong></p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <!-- 單個產品卡片 -->
+      <div class="col-sm-3 mb-2">
+        <a
+          href="
+          https://shopee.tw/%E7%8F%BE%E8%B2%A8%E2%9A%A1%E7%B4%94%E6%A3%89-%E5%A4%A7%E5%B0%BA%E7%A2%BCt%E6%81%A4-%E6%AD%90%E7%BE%8E%E8%A1%97%E9%A0%AD%E5%8D%B0%E8%8A%B1-M-8XL%E7%9F%AD%E8%A2%96-%E7%9F%AD%E8%A2%96%E4%B8%8A%E8%A1%A3-%E6%83%85%E4%BE%B6%E8%A3%9D-oversize-%E5%8E%9F%E5%AE%BF%E9%A2%A8%E4%B8%8A%E8%A1%A3-%E7%9F%AD%E8%A2%96t%E6%81%A4%E8%A1%A3%E6%9C%8D%E5%A5%B3-%E5%A4%A2-i.1036999726.27656546149?sp_atk=889bb6b1-c2c8-440e-940a-2e1a9e9c4dde&xptdk=889bb6b1-c2c8-440e-940a-2e1a9e9c4dde
+          "
+          target="_blank"
+          class="Jiugongge-URL"
+        >
+          <div class="card h-100">
+            <img src="./Jiugongge/7.jpg" class="card-img" alt="產品2" />
+            <div class="card-body">
+              <h5 class="card-title">純棉 大尺碼t恤 歐美街頭印花</h5>
+              <p class="card-text">
+                M-8XL短袖 短袖上衣 情侶裝 oversize 原宿風上衣 短袖t恤衣服女/夢
+              </p>
+              <p class="card-price"><strong>$800</strong></p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- 單個產品卡片 -->
+      <div class="col-sm-3 mb-2">
+        <a
+          href="
+          https://shopee.tw/%E6%97%A9%E7%A7%8B%E6%AC%BE%E6%B4%8B%E8%A3%9D%E5%A5%B32022%E6%96%B0%E6%AC%BE%E6%B3%95%E5%BC%8F%E7%94%9C%E7%BE%8E%E6%B8%9B%E9%BD%A1%E5%88%9D%E6%88%80%E8%A8%AD%E8%A8%88%E6%84%9F%E5%B0%8F%E7%9C%BE%E5%A8%83%E5%A8%83%E9%A0%98%E5%85%AC%E4%B8%BB%E8%A3%99-i.815655952.23530268933?sp_atk=1bf7fda0-0313-445f-afa2-9a471377a7a4&xptdk=1bf7fda0-0313-445f-afa2-9a471377a7a4
+          "
+          target="_blank"
+          class="Jiugongge-URL"
+        >
+          <div class="card h-100">
+            <img src="./Jiugongge/8.jpg" class="card-img" alt="產品2" />
+            <div class="card-body">
+              <h5 class="card-title">早秋款洋裝女2022新款</h5>
+              <p class="card-text">
+                法式甜美減齡初戀設計感小眾娃娃領公主裙
+              </p>
+              <p class="card-price"><strong>$800</strong></p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <!-- 其他產品卡片繼續 -->
+    </div>
+  </div>
+</body>
